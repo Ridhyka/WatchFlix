@@ -1,0 +1,82 @@
+/* Main section background and layout */
+.main-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .overlay {
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(77, 73, 73, 0.6); /* Dark overlay for better readability */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      overflow-y: auto; /* Enable vertical scrolling within the overlay */
+      text-align: center;
+    }
+    
+  }
+  
+  /* Search Bar Container */
+.search-bar-container {
+    position: relative;
+    z-index: 2; /* Ensure it appears above the background image and overlay */
+    margin-top: 20px;
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    width: 600px; /* Increased width */
+    padding: 20px; /* Increased padding for a larger look */
+    font-size: 20px; /* Bigger font size */
+    border-radius: 50px; /* Make it more rounded */
+    border: none;
+    outline: none;
+    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent dark background */
+    color: white;
+    text-align: center;
+   
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* More prominent glow */
+    transition: 0.3s ease-in-out;
+  }
+  
+  .search-bar::placeholder {
+    color: #ddd; /* Lighter placeholder for visibility */
+    font-size: 18px;
+  }
+  
+  .search-bar:hover {
+    background-color: rgba(68, 68, 68, 0.9); /* Slightly lighter hover effect */
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.9); /* Brighter hover glow */
+  }
+  
+  .featured-title {
+    font-size: 60px;
+    text-align: left;
+  }
+
+  .featured-overview{
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .search-results h2 {
+    margin: 20px 0;
+    font-size: 24px;
+    color: #0fff;
+    text-align: left;
+  }
+  

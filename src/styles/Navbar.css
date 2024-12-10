@@ -1,0 +1,153 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: flex-start; /* Logo on the left, links on the right */
+  align-items: center; /* Vertically center items */
+  background-color: #000;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 5px 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Logo */
+.nav-logo {
+  color: #0ff;
+  font-size: 24px;
+  font-weight: bold;
+  
+  order: 1;
+}
+
+.nav-logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 50px; /* Add spacing between links */
+  order: 2;
+  margin-left: 20px
+}
+
+/* Individual links */
+.neon-link {
+  text-decoration: none;
+  color: #0ff;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.neon-link:hover {
+  color: #f0f;
+  text-shadow: 0 0 10px #f0f, 0 0 20px #f0f, 0 0 30px #ff00ff;
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-title {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background-color: #111;
+  border: 1px solid #444;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Add spacing between dropdown items */
+  box-shadow: 0 0 10px #0ff;
+  max-width: 250px; /* Limit the width of the dropdown */
+  width: auto; /* Allow the dropdown to resize based on content */
+  z-index: 1001;
+}
+
+.dropdown-menu .neon-link {
+  font-size: 16px;
+}
+
+/* Ensuring the dropdown stays within the screen width
+@media (max-width: 768px) {
+  .dropdown-menu {
+    left: -20px; /* Adjust the left position on small screens */
+  /*}
+} */
+
+/* Handle overflowing dropdown */
+.dropdown-menu {
+  overflow-x: auto; /* Allow horizontal scrolling if necessary */
+}
+@media (max-width: 768px) {
+  .navbar {
+    padding-left: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .nav-links {
+    gap: 20px; /* Reduce space between links */
+  }
+}
+
+
+
+
+
+.movies-section {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping to the next line */
+  justify-content: space-evenly; /* Distributes movie cards evenly */
+  gap: 20px; /* Adds space between items */
+}
+
+.movie-card {
+  flex: 1 1 calc(20% - 20px); /* Adjust the width to fit 5 cards per row */
+  max-width: 200px; /* Optional: Limit maximum width */
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.2s;
+}
+
+.movie-card img {
+  width: 100%; /* Make the image responsive */
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.movie-card h3 {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.movie-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* For smaller screens, adjust to fit fewer cards */
+@media (max-width: 768px) {
+  .movie-card {
+    flex: 1 1 calc(45% - 20px); /* 2 cards per row on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-card {
+    flex: 1 1 100%; /* 1 card per row on very small screens */
+  }
+}
