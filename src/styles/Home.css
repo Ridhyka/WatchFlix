@@ -1,7 +1,7 @@
 /* Main section background and layout */
-.main-section {
+ .main-section {
     position: relative;
-    height: 100vh; /* Full viewport height */
+    height: 100vh; 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -79,4 +79,3 @@
     color: #0fff;
     text-align: left;
   }
-  

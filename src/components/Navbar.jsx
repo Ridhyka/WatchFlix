@@ -1,11 +1,59 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { createClient } from "@supabase/supabase-js";
+import { useNavigate } from "react-router-dom";
 import "../styles/Navbar.css";
+
+const supabase = createClient(
+  "https://curpgfxykfjlqcovsnny.supabase.co", 
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN1cnBnZnh5a2ZqbHFjb3Zzbm55Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzY1MjYyNjgsImV4cCI6MjA1MjEwMjI2OH0.LYIXueK8FTMopvu3qoZ2Pm72SuQgCocaesLUGZZVMuo"
+);
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Track login status
+  const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
+
+  useEffect(() => {
+    const fetchSession = async () => {
+      const { data, error } = await supabase.auth.getSession();
+      if (error) {
+        console.error("Error fetching session:", error.message);
+      } else {
+        if (data.session) {
+          setIsLoggedIn(true);
+          setUser(data.session.user);
+        }
+      }
+    };
+    fetchSession();
+  }, []);
+
+  // Handle login/logout functionality
+  // const handleLoginLogout = async () => {
+  //   if (isLoggedIn) {
+  //     await supabase.auth.signOut();  // Log out the user
+  //     setIsLoggedIn(false);
+  //     setUser(null); // Clear user data
+  //     alert("Logged out successfully!");
+  //   } else {
+  //     window.location.href = "/login"; // Redirect to login page if not logged in
+  //   }
+  // };
+   // Handle navigation for Login/Profile
+   const handleButtonClick = () => {
+    if (isLoggedIn) {
+      navigate("/Profile"); // Navigate to the Profile page if logged in
+    } else {
+      navigate("/Login"); // Navigate to the Login page if not logged in
+    }
+  };
+
+   
   return (
     <div className="navbar">
       
@@ -39,6 +87,13 @@ const Navbar = () => {
             </div>
           )}
         </div>
+         {/* Login/Sign-In Button */}
+         <button
+          className="login-btn neon-link"
+          onClick={handleButtonClick}
+        >
+           {isLoggedIn ? "My Profile " : "Login / Sign In"}
+        </button>
       </div>
       
     </div>

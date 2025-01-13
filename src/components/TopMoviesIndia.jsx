@@ -40,6 +40,8 @@ const TopMoviesIndia = ({ onMovieClick }) => {
       fetchMovies(); // Fetch the next batch of movies (repeat the same 10)
     }
   };
+  
+  
 
   useEffect(() => {
     fetchMovies(); // Initial fetch

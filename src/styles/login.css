@@ -1,0 +1,89 @@
+/* Login Page Container */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #000; /* Black background */
+  color: #0ff; /* Neon blue text color */
+  font-family: "Arial", sans-serif;
+}
+
+/* Login Header */
+.login-container h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.login-container input {
+  width: 300px;
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #0ff;
+  background-color: #111; /* Dark background for inputs */
+  border: 2px solid #0ff; /* Neon blue border */
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.login-container input::placeholder {
+  color: #777; /* Dim placeholder text */
+}
+
+.login-container input:focus {
+  border-color: #00faff; /* Slightly brighter neon blue on focus */
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+}
+
+/* Login Button */
+.login-container button {
+  width: 300px;
+  padding: 15px;
+  margin: 20px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+  background-color: #0ff; /* Neon blue button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-container button:hover {
+  background-color: #00faff; /* Slightly brighter blue on hover */
+  box-shadow: 0 0 30px #0ff, 0 0 40px #00faff;
+}
+
+/* Signup Link */
+.login-container p {
+  font-size: 1rem;
+  color: #777;
+}
+
+.login-container p a {
+  color: #0ff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-container p a:hover {
+  color: #00faff; /* Brighter neon blue on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container input,
+  .login-container button {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+}

@@ -151,3 +151,29 @@
     flex: 1 1 100%; /* 1 card per row on very small screens */
   }
 }
+
+
+/* Login/Sign-In Button */
+.login-btn {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #0ff; /* Neon blue border */
+  color: #0ff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 5px;
+  margin-left: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.login-btn:hover {
+  /* background-color: #0ff; */
+  
+  color: #f0f;
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #f0f, 0 0 30px #ff00ff;
+  box-shadow: 0 0 30px #ff00ff;
+}
+

@@ -13,7 +13,8 @@ const TrendingMovies = ({ onMovieClick }) => {
           "https://api.themoviedb.org/3/trending/movie/week",
           {
             params: {
-              api_key: process.env.REACT_APP_TMDB_API_KEY,// Replace with your TMDb API key
+              api_key: process.env.REACT_APP_TMDB_API_KEY,
+              language: "en-US",// Replace with your TMDb API key
             },
           }
         );
