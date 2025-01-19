@@ -29,9 +29,10 @@
 /* Navigation links */
 .nav-links {
   display: flex;
-  gap: 50px; /* Add spacing between links */
+  gap: 60px; /* Add spacing between links */
   order: 2;
-  margin-left: 20px
+  margin-left: 20px;
+  align-items: center;
 }
 
 /* Individual links */

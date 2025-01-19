@@ -177,9 +177,21 @@ const MovieDetailPopup = ({ movie, onClose }) => {
         </div>
         <h1>{movie.title}</h1>
         <p><strong>Details:</strong> {movie.overview}</p>
-        <p><strong>Genre:</strong> {movie.genres?.map(genre => genre.name).join(', ')}</p>
+        <p>
+  <strong>Genre:</strong>{' '}
+  {movie.genres && movie.genres.length > 0
+    ? movie.genres.map((genre) => genre.name).join(', ')
+    : 'N/A'}
+</p>
+        {/* <p><strong>Genre:</strong> {movie.genres?.map(genre => genre.name).join(', ')}</p> */}
+
         <p><strong>Ratings:</strong> {movie.vote_average}/10</p>
-        <p><strong>Runtime:</strong> {movie.runtime} hours</p>
+        <p>
+  <strong>Runtime:</strong>{' '}
+  {movie.runtime ? `${Math.floor(movie.runtime / 60)}h ${movie.runtime % 60}m` : 'N/A'}
+</p>
+{/* 
+        <p><strong>Runtime:</strong> {movie.runtime} hours</p> */}
         <p><strong>Available on:</strong> {movie.ottPlatforms || 'N/A'}</p>
         <p><strong>Watch trailer:</strong></p>
         <a

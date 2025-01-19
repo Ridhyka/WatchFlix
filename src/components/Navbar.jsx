@@ -61,7 +61,7 @@ const Navbar = () => {
     <div className="navbar">
       
       <div className="nav-logo">
-        <a href="#home">WatchFlix</a>
+        <a href="/">WatchFlix</a>
       </div>
 
       <div className="nav-links">
