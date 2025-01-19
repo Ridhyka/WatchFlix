@@ -71,6 +71,8 @@ const Profile = () => {
 
   const handleRemoveMovie = async (movieId) => {
     // Remove from database
+    const updatedMovies = movies.filter((movie) => movie.id !== movieId);
+    setMovies(updatedMovies);
     const { error } = await supabase
       .from("watchlist")
       .delete()
@@ -83,7 +85,7 @@ const Profile = () => {
     }
 
     // Update the local state
-    setMovies(movies.filter((movie) => movie.db_id !== movieId));
+    // setMovies(movies.filter((movie) => movie.id !== movieId));
   };
 
   return (
@@ -99,7 +101,7 @@ const Profile = () => {
             <div key={movie.id} className="profile-movie-card">
               <div
                 className="remove-movie-icon"
-                onClick={() => handleRemoveMovie(movie.db_id)}
+                onClick={() => handleRemoveMovie(movie.id)}
               >
                 &times;
               </div>

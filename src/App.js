@@ -2,10 +2,14 @@
 import React, { useState } from "react";
 import Navbar from "./components/Navbar"; // Import the Navbar component
 import HomePage from "./pages/HomePage";
+import MovieDetailPopup from "./components/MovieDetailPopup";
+import CategoryPage from './pages/CategoryPage'; 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./pages/Login";
 import SignUpPage from "./pages/SignUpPage";
 import Profile from "./pages/Profile";
+import MovieList from "./components/MovieList";
+import { useParams } from 'react-router-dom'; 
 // import Home from "./components/Home";
 // import TopMoviesIndia from "./components/TopMoviesIndia";
 // import TrendingMovies from "./components/TrendingMovies";
@@ -26,20 +30,44 @@ const App = () => {
   // const handleClosePopup = () => {
   //   setSelectedMovie(null); // Clear the selected movie
   // };
+  // const [selectedCategory, setSelectedCategory] = useState("");
+  //  const [selectedMovie, setSelectedMovie] = useState(null);
+  
+  //   const handleMovieClick = (movie) => {
+  //     setSelectedMovie(movie); // Set the selected movie
+  //   };
+  
+  //   const handleClosePopup = () => {
+  //     setSelectedMovie(null); // Clear the selected movie
+  //   };
 
   return (
     <div className="app">
       <Router>
       <Navbar />
+      {/* <Navbar setSelectedCategory={setSelectedCategory} /> */}
+      {/* Pass the selected category to MovieList */}
+      {/* <MovieList selectedCategory={selectedCategory} /> */}
 
       <Routes>
-      <Route path="/" element={<HomePage />} />
+       <Route path="/" element={<HomePage />} />
+       
+      {/* <Route
+    path="/"
+    element={
+      <div>
+        <HomePage />
+        <MovieList selectedCategory={selectedCategory} />
+      </div>
+    } /> */}
+
+<Route path="/category/:categoryName" element={<CategoryPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/profile" element={<Profile />} />
         </Routes>
-{/* 
-      <Home onMovieClick={handleMovieClick} />
+
+      {/* <Home onMovieClick={handleMovieClick} /> */}
 
       {/* Pass the movie click handler to child components */}
       {/* <TopMoviesIndia onMovieClick={handleMovieClick} />
@@ -52,10 +80,11 @@ const App = () => {
       )} */}
 
       <Footer /> 
-      </Router>}
+      </Router>
     </div>
   );
 };
+
 
 export default App;
 
