@@ -19,7 +19,9 @@
 }
 
 .popup-content {
-    background: #f5f5f5; /* Popup content background */
+    background: #eeeded; 
+   
+    
     padding: 20px;
     border-radius: 10px;
    
@@ -72,26 +74,36 @@
 .popup-content img{
     width: 300px;
     height: 400px;
+    
     /* justify-content: center;
     align-items: center; */
 }
+.poster img{
+    
+    margin: 0 auto;
+padding-left: 108px;
+}
 
 .add-to-watchlist-btn {
-    background: linear-gradient(90deg, #1d3557, #457b9d);
+    background: linear-gradient(90deg, #768fb4, #137ab9);
     color: #fff;
     border: none;
     border-radius: 25px;
-    padding: 12px 24px;
+    padding: 12px 80px;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     outline: none;
+    display: block;
+    margin: 20px auto;
+   
   }
   
   .add-to-watchlist-btn:hover {
-    background: linear-gradient(90deg, #457b9d, #1d3557);
+    /* background: linear-gradient(90deg, #457b9d, #1d3557); */
+    background: linear-gradient(90deg, #4c6574, #196adb); 
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
   }
@@ -101,3 +113,37 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   }
   
+
+  .heading{
+    /* padding: 0px 100px; */
+    text-align: center;
+  }
+  .ott-platforms {
+    margin-top: 1em;
+  }
+  
+  .platform-logos {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .platform-link {
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  .platform-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 5px;
+    transition: transform 0.2s ease;
+  }
+  
+  .platform-logo:hover {
+    transform: scale(1.1);
+  }

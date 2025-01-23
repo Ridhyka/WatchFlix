@@ -64,9 +64,9 @@ const TopMoviesIndia = ({ onMovieClick }) => {
               alt={movie.title}
               className="movie-poster"
             />
-            <div className="movie-details">
+            {/* <div className="movie-details">
               {/* <h3 className="movie-title">{movie.title}</h3> */}
-            </div>
+            {/* </div> */}
           </div>
         ))}
       </div>

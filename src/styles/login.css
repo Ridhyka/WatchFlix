@@ -13,7 +13,7 @@
 /* Login Header */
 .login-container h1 {
   font-size: 3rem;
-  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+  /* text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff; */
   margin-bottom: 20px;
 }
 
@@ -54,13 +54,15 @@
   border-radius: 5px;
   cursor: pointer;
   text-transform: uppercase;
-  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  /* box-shadow: 0 0 10px #0ff, 0 0 20px #0ff; */
   transition: all 0.3s ease-in-out;
 }
 
 .login-container button:hover {
-  background-color: #00faff; /* Slightly brighter blue on hover */
-  box-shadow: 0 0 30px #0ff, 0 0 40px #00faff;
+  /* background-color: #00faff;  */
+  background-color: #0ff;
+  /* box-shadow: 0 0 30px #0ff, 0 0 40px #00faff; */
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
 }
 
 /* Signup Link */

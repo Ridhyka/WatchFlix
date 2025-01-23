@@ -63,6 +63,7 @@ const Navbar = () => {
       <div className="nav-logo">
         <a href="/">WatchFlix</a>
       </div>
+      
 
       <div className="nav-links">
         <a href="/" className="neon-link">Home</a>
