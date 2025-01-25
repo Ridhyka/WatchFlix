@@ -33,25 +33,36 @@
    - Fully optimized for desktop, tablet, and mobile devices.
 
 ---
-
 ## 📸 Screenshots
 
 ### Home Page  
 _Showcases trending movies, search bar, and user-specific recommendations._  
-![Home Page 1](public/images/home.png)  
-![Home Page 2](public/images/home2.png)  
+
+<p align="center">
+  <img src="public/images/home.png" alt="Home Page 1" width="45%" style="margin-right: 10px;"/>  
+  <img src="public/images/home2.png" alt="Home Page 2" width="45%"/>  
+</p>
 
 ### Watchlist  
 _A personalized collection of movies saved by the user._  
-![Watchlist](public/images/profile.png)  
+
+<p align="center">
+  <img src="public/images/profile.png" alt="Watchlist" width="45%" style="margin-right: 10px;"/>  
+</p>
 
 ### Movie Details  
 _In-depth details of a selected movie._  
-![Movie Details](public/images/details.jpg)  
+
+<p align="center">
+  <img src="public/images/details.jpg" alt="Movie Details" width="45%" style="margin-right: 10px;"/>  
+</p>
 
 ### Login Page  
 _Simple and secure login interface._  
-![Login Page](public/images/login.png)  
+
+<p align="center">
+  <img src="public/images/login.png" alt="Login Page" width="45%" style="margin-right: 10px;"/>  
+</p>
 
 
 ## 🛠️ Tech Stack
