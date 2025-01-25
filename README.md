@@ -49,6 +49,11 @@
 - **The Movie Database (TMDB)**: For fetching movie data such as titles, posters, descriptions, ratings, and more.
 
 ---
+## 🌟 Key Highlights
+
+- **User-Friendly UI**: An intuitive design ensuring a seamless user experience.
+- **Real-Time Data**: Fetches up-to-date movie details from TMDB API.
+- **Scalability**: Built with modern tools, making it easy to extend features in the future.
 
 ## 📂 Folder Structure
 
@@ -66,6 +71,7 @@ WatchFlix/
 └── README.md                # Project documentation  
 
 
+```
 ## Setup
 
 ### Prerequisites
