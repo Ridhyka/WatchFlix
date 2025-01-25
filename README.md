@@ -34,6 +34,26 @@
 
 ---
 
+## 📸 Screenshots
+
+### Home Page  
+_Showcases trending movies, search bar, and user-specific recommendations._  
+![Home Page 1](public/images/home.png)  
+![Home Page 2](public/images/home2.png)  
+
+### Watchlist  
+_A personalized collection of movies saved by the user._  
+![Watchlist](public/images/profile.png)  
+
+### Movie Details  
+_In-depth details of a selected movie._  
+![Movie Details](public/images/details.jpg)  
+
+### Login Page  
+_Simple and secure login interface._  
+![Login Page](public/images/login.png)  
+
+
 ## 🛠️ Tech Stack
 
 ### Frontend
@@ -55,23 +75,42 @@
 - **Real-Time Data**: Fetches up-to-date movie details from TMDB API.
 - **Scalability**: Built with modern tools, making it easy to extend features in the future.
 
-## 📂 Folder Structure
-
-```plaintext
-WatchFlix/  
-├── public/  
-│   └── index.html           # Main HTML file  
-├── src/  
-│   ├── components/          # Reusable components (e.g., Navbar, MovieCard)  
-│   ├── pages/               # Page-level components (Home, Login, Watchlist)  
-│   ├── services/            # API service configurations  
-│   ├── styles/              # Custom CSS and Tailwind configurations  
-│   ├── App.js               # Main application file  
-│   └── index.js             # Entry point of the app  
-└── README.md                # Project documentation  
 
 
-```
+
+
+## 📈 Future Enhancements
+
+- Add a recommendation algorithm to suggest personalized movies based on user preferences.
+- Enable user reviews and ratings for movies.
+- Incorporate dark mode for better accessibility and user customization.
+- Expand to support TV shows and documentaries.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! If you'd like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`feature/your-feature-name`).
+3. Commit your changes and push.
+4. Open a Pull Request.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**. See the `LICENSE` file for details.
+
+---
+
+## 🎉 Acknowledgments
+
+- **[The Movie Database (TMDB)](https://www.themoviedb.org/)** for providing the movie data API.
+- **[Supabase](https://supabase.com/)** for seamless backend integration.
+- **[React.js](https://reactjs.org/)** and the amazing open-source community for building the tools we rely on.
+
 ## Setup
 
 ### Prerequisites
